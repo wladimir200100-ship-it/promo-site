@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ПромоЛов</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" />
+  <meta name="theme-color" content="#ff6b00" />
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #fff8f0; }
+    h1 { color: #ff6b00; }
+    .promo { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>🔥 ПромоЛов</h1>
+  <div class="promo">
+    <h3>Акция от Coca-Cola</h3>
+    <p>Выиграй iPhone! Участвуй до 30 ноября.</p>
+  </div>
+  <div class="promo">
+    <h3>Бесплатные пробники от Garnier</h3>
+    <p>Заполни анкету — получи подарок.</p>
+  </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
+</body>
+</html>
