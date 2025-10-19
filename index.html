@@ -6,148 +6,61 @@
   <title>ПромоЛов — Лучшие промоакции России</title>
   <meta name="description" content="Участвуй в акциях, выигрывай призы, общайся с промо-охотниками. Добавляй свою акцию как компания!" />
 
-  <!-- Шрифт Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
   <!-- PWA -->
   <link rel="manifest" href="/manifest.json" />
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
   <meta name="theme-color" content="#2563eb" />
 
- <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f8fafc; /* точный фон как на outsale.org */
-    color: #0f172a; /* основной текст */
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-
-  /* Второстепенный текст */
-  .text-muted,
-  small,
-  p,
-  .date {
-    color: #64748b;
-  }
-
-  /* Акцентный цвет */
-  a,
-  h1, h2, h3,
-  .btn,
-  .promo-card h2 {
-    color: #2563eb;
-  }
-
-  a:hover {
-    opacity: 0.85;
-  }
-
-  .btn {
-    display: inline-block;
-    background-color: #2563eb;
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .btn:hover {
-    background-color: #1d4ed8;
-  }
-
-  /* Карточки акций */
-  .promo-card {
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 24px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
-  }
-
-  .promo-card img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 16px;
-  }
-
-  /* Навигация */
-  nav {
-    background: white;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  .nav-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
-  }
-
-  .nav-item {
-    padding: 14px 16px;
-  }
-
-  .nav-link {
-    text-decoration: none;
-    color: #0f172a;
-    font-weight: 600;
-    font-size: 16px;
-  }
-
-  .nav-link:hover,
-  .nav-link.active {
-    color: #2563eb;
-  }
-
-  /* Баннер PROACTIONS */
-  .promo-banner {
-    background: #2563eb;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  }
-
-  /* Контент */
-  main {
-    max-width: 800px;
-    margin: 28px auto;
-    padding: 0 20px;
-  }
-
-  footer {
-    text-align: center;
-    padding: 24px 20px;
-    color: #64748b;
-    font-size: 14px;
-    margin-top: 32px;
-  }
-
-  @media (max-width: 600px) {
-    .nav-list { flex-direction: column; align-items: center; }
-    .nav-item { width: 100%; text-align: center; }
-  }
-</style>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f8fafc; /* точный фон как на outsale.org */
+      color: #0f172a; /* основной текст */
+      line-height: 1.6;
+      min-height: 100vh;
     }
 
-    /* === БАННЕР В СТИЛЕ PROACTIONS === */
+    /* Второстепенный текст */
+    .text-muted,
+    small,
+    p,
+    .date {
+      color: #64748b;
+    }
+
+    /* Акцентный цвет */
+    a,
+    h1, h2, h3,
+    .btn,
+    .promo-card h2 {
+      color: #2563eb;
+    }
+
+    a:hover {
+      opacity: 0.85;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #2563eb;
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    /* Баннер PROACTIONS */
     .promo-banner {
-      background: var(--primary);
+      background: #2563eb;
       color: white;
       text-align: center;
       padding: 10px;
@@ -157,7 +70,7 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 
-    /* === НАВИГАЦИЯ === */
+    /* Навигация */
     nav {
       background: white;
       box-shadow: 0 1px 2px rgba(0,0,0,0.05);
@@ -181,97 +94,72 @@
 
     .nav-link {
       text-decoration: none;
-      color: var(--text);
+      color: #0f172a;
       font-weight: 600;
       font-size: 16px;
-      transition: color 0.2s;
     }
 
     .nav-link:hover,
     .nav-link.active {
-      color: var(--primary);
+      color: #2563eb;
     }
 
-    /* === КОНТЕНТ === */
+    /* Контент */
     main {
       max-width: 800px;
       margin: 28px auto;
       padding: 0 20px;
     }
 
+    /* Карточки акций */
     .promo-card {
-      background: var(--card-bg);
-      border-radius: 12px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
       padding: 24px;
       margin-bottom: 24px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
     }
 
     .promo-card img {
       width: 100%;
       max-height: 200px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 6px;
       margin-bottom: 16px;
     }
 
     .promo-card h2 {
-      color: var(--primary);
       margin-bottom: 12px;
-      font-size: 20px;
       font-weight: 700;
-    }
-
-    .promo-card p {
-      color: var(--text-light);
-      margin-bottom: 14px;
-      font-size: 15px;
+      font-size: 20px;
     }
 
     .date {
       font-size: 13px;
-      color: var(--text-light);
       font-weight: 600;
     }
 
-    /* Сообщество / CTA */
+    /* Блок для компаний */
     .community {
       text-align: center;
       margin-top: 32px;
       padding: 28px;
       background: white;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
     }
 
     .community h3 {
       margin-bottom: 12px;
-      color: var(--primary);
       font-weight: 700;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--primary);
-      color: white;
-      padding: 10px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 15px;
-      transition: background 0.2s;
-    }
-
-    .btn:hover {
-      background: #1d4ed8;
     }
 
     footer {
       text-align: center;
       padding: 24px 20px;
-      color: var(--text-light);
+      color: #64748b;
       font-size: 14px;
       margin-top: 32px;
     }
@@ -285,9 +173,9 @@
 </head>
 <body>
 
-  <!-- Баннер как у PROACTIONS -->
+  <!-- ТОЧНАЯ КОПИЯ БАННЕРА PROACTIONS.RU -->
   <div class="promo-banner">
-    ЛУЧШИЕ АКЦИИ РОССИЙСКОЙ ФЕДЕРАЦИИ!© УЧАСТВУЙ! ОБЩАЙСЯ! ПОБЕЖДАЙ!® УЧАСТВУЙ! ВЫИГРЫВАЙ! ПОБЕЖДАЙ!®
+    ЛУЧШИЕ АКЦИИ РОССИЙСКОЙ ФЕДЕРАЦИИ!© УЧАСТВУЙ! ОБЩАЙСЯ! ПОБЕЖДАЙ!® PROACTIONS.ru first and the rest nowhere.® УЧАСТВУЙ! ВЫИГРЫВАЙ! ПОБЕЖДАЙ!®
   </div>
 
   <!-- Меню -->
@@ -301,7 +189,7 @@
     </ul>
   </nav>
 
-  <!-- Основной контент -->
+  <!-- Контент -->
   <main>
     <div class="promo-card">
       <img src="https://via.placeholder.com/800x200/2563eb/FFFFFF?text=Coca-Cola+Акция" alt="Акция Coca-Cola">
@@ -321,10 +209,8 @@
     <div class="community">
       <h3>🏢 Ваша компания?</h3>
       <p>Добавьте свою акцию — и тысячи промо-охотников примут участие!</p>
-      <!-- ЗАМЕНИТЕ ССЫЛКУ НА СВОЮ GOOGLE FORM -->
-      <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" 
-         target="_blank" 
-         class="btn">Добавить акцию</a>
+      <!-- ⚠️ ЗАМЕНИТЕ ССЫЛКУ НА СВОЮ GOOGLE FORM -->
+      <a href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" class="btn">Добавить акцию</a>
     </div>
   </main>
 
