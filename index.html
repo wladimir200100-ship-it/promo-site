@@ -11,175 +11,166 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
   <meta name="theme-color" content="#0071F2" />
 
-  <style>
-    :root {
-      --primary: #0071F2;
-      --primary-light: #00C2FF;
-      --bg: #FAFAFA;
-      --card-bg: #FFFFFF;
-      --text: #1A1A1A;
-      --text-light: #666666;
-      --border: #E0E0E0;
-    }
+ <style>
+  :root {
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #0f172a;
+    --text-light: #64748b;
+    --primary: #2563eb;
+    --border: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 40px;
+  }
 
-    /* === БАННЕР В СТИЛЕ PROACTIONS === */
-    .promo-banner {
-      background: linear-gradient(90deg, var(--primary), var(--primary-light));
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-weight: 700;
-      font-size: 14px;
-      letter-spacing: 0.5px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+  /* === БАННЕР В СТИЛЕ PROACTIONS === */
+  .promo-banner {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
 
-    /* === НАВИГАЦИЯ === */
-    nav {
-      background: white;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+  /* === НАВИГАЦИЯ === */
+  nav {
+    background: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
 
-    .nav-list {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      flex-wrap: wrap;
-    }
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+  }
 
-    .nav-item {
-      padding: 14px 16px;
-    }
+  .nav-item {
+    padding: 14px 16px;
+  }
 
-    .nav-link {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 600;
-      font-size: 16px;
-      transition: color 0.2s;
-    }
+  .nav-link {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.2s;
+  }
 
-    .nav-link:hover,
-    .nav-link.active {
-      color: var(--primary);
-    }
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--primary);
+  }
 
-    /* === КОНТЕНТ === */
-    main {
-      max-width: 800px;
-      margin: 24px auto;
-      padding: 0 16px;
-    }
+  /* === КОНТЕНТ === */
+  main {
+    max-width: 800px;
+    margin: 28px auto;
+    padding: 0 20px;
+  }
 
-    .promo-card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      border: 1px solid var(--border);
-    }
+  .promo-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+  }
 
-    .promo-card img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 16px;
-    }
+  .promo-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
 
-    .promo-card h2 {
-      color: var(--primary);
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
+  .promo-card h2 {
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 700;
+  }
 
-    .promo-card p {
-      color: var(--text-light);
-      margin-bottom: 12px;
-    }
+  .promo-card p {
+    color: var(--text-light);
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
 
-    .date {
-      font-size: 13px;
-      color: #888;
-      font-weight: 600;
-    }
+  .date {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 600;
+  }
 
-    footer {
-      text-align: center;
-      padding: 24px 16px;
-      color: var(--text-light);
-      font-size: 14px;
-      border-top: 1px solid var(--border);
-      margin-top: 32px;
-      background: white;
-    }
+  /* Сообщество / CTA */
+  .community {
+    text-align: center;
+    margin-top: 32px;
+    padding: 28px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
 
-    @media (max-width: 600px) {
-      .nav-list { flex-direction: column; align-items: center; }
-      .nav-item { width: 100%; text-align: center; }
-    }
-  </style>
-</head>
-<body>
+  .community h3 {
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-weight: 700;
+  }
 
-  <!-- Баннер как у PROACTIONS -->
-  <div class="promo-banner">
-    ЛУЧШИЕ АКЦИИ РОССИЙСКОЙ ФЕДЕРАЦИИ! © УЧАСТВУЙ! ОБЩАЙСЯ! ПОБЕЖДАЙ! ®
-  </div>
+  .btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.2s;
+  }
 
-  <!-- Меню -->
-  <nav>
-    <ul class="nav-list">
-      <li class="nav-item"><a href="/" class="nav-link active">Главная</a></li>
-      <li class="nav-item"><a href="/akcii" class="nav-link">Акции</a></li>
-      <li class="nav-item"><a href="/prizes" class="nav-link">Призы</a></li>
-      <li class="nav-item"><a href="/profile" class="nav-link">Личный кабинет</a></li>
-      <li class="nav-item"><a href="/add" class="nav-link">Добавить акцию</a></li>
-    </ul>
-  </nav>
+  .btn:hover {
+    background: #1d4ed8;
+  }
 
-  <!-- Основной контент -->
-  <main>
-    <div class="promo-card">
-      <img src="https://via.placeholder.com/800x200/0071F2/FFFFFF?text=Coca-Cola+Акция" alt="Акция Coca-Cola">
-      <h2>Акция от Coca-Cola</h2>
-      <p>Выиграй iPhone 16! Прими участие до окончания срока.</p>
-      <div class="date">🕗 Окончание: 30 ноября 2025</div>
-    </div>
+  footer {
+    text-align: center;
+    padding: 24px 20px;
+    color: var(--text-light);
+    font-size: 14px;
+    margin-top: 32px;
+  }
 
-    <div class="promo-card">
-      <img src="https://via.placeholder.com/800x200/00C2FF/FFFFFF?text=Garnier+Пробники" alt="Garnier">
-      <h2>Бесплатные пробники от Garnier</h2>
-      <p>Заполни анкету и получи набор косметики бесплатно!</p>
-      <div class="date">🕗 Окончание: 10 декабря 2025</div>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2025 ПромоЛов — Участвуй! Общайся! Побеждай!</p>
-  </footer>
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js');
-      });
-    }
-  </script>
-</body>
-</html>
+  @media (max-width: 600px) {
+    .nav-list { flex-direction: column; align-items: center; }
+    .nav-item { width: 100%; text-align: center; }
+    .promo-card { padding: 20px; }
+  }
+</style>
